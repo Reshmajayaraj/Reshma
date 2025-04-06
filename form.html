@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detailed Registration Form</title>
+</head>
+<body bgcolor="pink">
+
+    <h2 align="center">Detailed Registration Form</h2>
+
+    <div align="center">
+        <p><strong>Information:</strong> Please fill out all fields below to complete your registration.</p>
+        <hr>
+
+        <form action="#" method="POST">
+            
+            <h3>Personal Information</h3>
+            <table border="1" cellpadding="10" cellspacing="0" width="100%">
+                <tr>
+                    <td>First Name:</td>
+                    <td><input type="text" name="fname" placeholder="Enter your first name" required></td>
+                </tr>
+                <tr>
+                    <td>Last Name:</td>
+                    <td><input type="text" name="lname" placeholder="Enter your last name" required></td>
+                </tr>
+                <tr>
+                    <td>Gender:</td>
+                    <td>
+                        <input type="radio" name="gender" value="Male" required> Male
+                        <input type="radio" name="gender" value="Female" required> Female
+                        <input type="radio" name="gender" value="Other" required> Other
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date of Birth:</td>
+                    <td><input type="date" name="dob" required></td>
+                </tr>
+                <tr>
+                    <td>Email Address:</td>
+                    <td><input type="email" name="email" placeholder="Enter your email address" required></td>
+                </tr>
+                <tr>
+                    <td>Phone Number:</td>
+                    <td><input type="tel" name="phone" placeholder="Enter your phone number" required></td>
+                </tr>
+                <tr>
+                    <td>Preferred Contact Method:</td>
+                    <td>
+                        <input type="checkbox" name="contact_method" value="Phone"> Phone
+                        <input type="checkbox" name="contact_method" value="Email"> Email
+                        <input type="checkbox" name="contact_method" value="Postal Mail"> Postal Mail
+                    </td>
+                </tr>
+            </table>
+
+            <hr>
+
+            
+            <h3>Address Information</h3>
+            <table border="1" cellpadding="10" cellspacing="0" width="100%">
+                <tr>
+                    <td>Street Address:</td>
+                    <td><input type="text" name="street" placeholder="Enter your street address" required></td>
+                </tr>
+                <tr>
+                    <td>City:</td>
+                    <td><input type="text" name="city" placeholder="Enter your city" required></td>
+                </tr>
+                <tr>
+                    <td>State/Province:</td>
+                    <td><input type="text" name="state" placeholder="Enter your state or province" required></td>
+                </tr>
+                <tr>
+                    <td>Postal Code:</td>
+                    <td><input type="text" name="postal_code" placeholder="Enter your postal code" required></td>
+                </tr>
+                <tr>
+                    <td>Country:</td>
+                    <td>
+                        <select name="country" required>
+                            <option value="USA">United States</option>
+                            <option value="Canada">Canada</option>
+                            <option value="UK">United Kingdom</option>
+                            <option value="India">India</option>
+                            <option value="Australia">Australia</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+
+            <hr>
+
+            
+            <h3>Preferences</h3>
+            <table border="1" cellpadding="10" cellspacing="0" width="100%">
+                <tr>
+                    <td>Preferred Language:</td>
+                    <td>
+                        <select name="language" required>
+                            <option value="English">English</option>
+                            <option value="Spanish">Spanish</option>
+                            <option value="French">French</option>
+                            <option value="German">German</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Newsletter Subscription:</td>
+                    <td>
+                        <input type="radio" name="newsletter" value="Yes" required> Yes
+                        <input type="radio" name="newsletter" value="No" required> No
+                    </td>
+                </tr>
+                <tr>
+                    <td>Preferred Payment Method:</td>
+                    <td>
+                        <input type="checkbox" name="payment_method" value="Credit Card"> Credit Card
+                        <input type="checkbox" name="payment_method" value="PayPal"> PayPal
+                        <input type="checkbox" name="payment_method" value="Bank Transfer"> Bank Transfer
+                    </td>
+                </tr>
+            </table>
+
+            <hr>
+
+            
+            <h3>Signature</h3>
+            <table border="1" cellpadding="10" cellspacing="0" width="100%">
+                <tr>
+                    <td>Signature:</td>
+                    <td><input type="text" name="signature" placeholder="Type your signature here" required></td>
+                </tr>
+            </table>
+
+            <hr>
+
+            
+            <p align="center">
+                <input type="submit" value="Submit Registration">
+            </p>
+        </form>
+    </div>
+
+</body>
+</html>

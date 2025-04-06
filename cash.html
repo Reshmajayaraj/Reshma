@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cash on Delivery</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .container { max-width: 400px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 5px; }
+        label { display: block; margin: 10px 0 5px; }
+        input, button { width: 100%; padding: 10px; margin-top: 5px; }
+        button { background-color: #28a745; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: green; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Cash on Delivery</h2>
+<img src="deli.jpg" alt="img">
+        <form id="codForm">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}">
+            
+            <label for="product">Product Name</label>
+            <input type="text" id="product" name="product" required>
+            
+            <button type="submit">Place Order</button>
+        </form>
+        <p id="confirmation" style="color: green; display: none;">Order placed successfully!</p>
+    </div>
+
+    <script>
+        document.getElementById('codForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('confirmation').style.display = 'block';
+            this.reset();
+        });
+    </script>
+</body>
+</html>

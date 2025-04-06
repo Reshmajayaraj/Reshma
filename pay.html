@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .container { max-width: 400px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px; }
+        input, button { width: 100%; padding: 10px; margin: 5px 0; }
+        button { background-color: #28a745; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: #218838; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Payment Form</h2>
+<img src="card.jpg" alt="img">
+        <form id="paymentForm">
+            <input type="text" id="cardName" placeholder="Cardholder Name" required>
+            <input type="text" id="cardNumber" placeholder="Card Number" required maxlength="16">
+            <input type="text" id="expiry" placeholder="MM/YY" required maxlength="5">
+            <input type="text" id="cvv" placeholder="CVV" required maxlength="3">
+            <button type="button" onclick="processPayment()">Pay Now</button>
+        </form>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        function processPayment() {
+            let cardName = document.getElementById("cardName").value;
+            let cardNumber = document.getElementById("cardNumber").value;
+            let expiry = document.getElementById("expiry").value;
+            let cvv = document.getElementById("cvv").value;
+            
+            if (cardName && cardNumber.length === 16 && expiry.length === 5 && cvv.length === 3) {
+                document.getElementById("message").innerText = "Payment Successful!";
+                document.getElementById("message").style.color = "green";
+            } else {
+                document.getElementById("message").innerText = "Invalid payment details.";
+                document.getElementById("message").style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>
